@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pikoys</title>
+    <link rel="icon" href="Images/Pikoys-Logo.png" type="image/icon type">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <nav class="sidebar">
+            <div class="logo">P</div>
+            <div class="nav-item active" onclick="showMainMenu()">
+                <span class="material-icons">home</span>
+                <span>Home</span>
+            </div>
+            <div class="nav-item" onclick="showDashboard()">
+                <span class="material-icons">dashboard</span>
+                <span>Sales History</span>
+            </div>
+            <div class="nav-item" >
+                <a href="about.html">
+                    <span class="material-icons">account_circle</span>
+                    <span>About</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <span class="material-icons">settings</span>
+                <span>Settings</span>
+            </div>
+            <div class="nav-item logout">
+                <span class="material-icons">logout</span>
+                <span>Log Out</span>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+            <!-- Header -->
+            <header>
+                <div class="header-left">
+                    <h1>Pikoy's <span>Fried Chicken</span></h1>
+                </div>
+            </header>
+
+            <!-- Main Menu Cards -->
+            <div class="menu-grid" id="mainMenu">
+                <div class="category-card" onclick="showOptions('whole')">
+                    <img src="Images/Whole.jpg" alt="Whole Chicken">
+                    <h2>Whole Fried Chicken</h2>
+                </div>
+                <div class="category-card" onclick="showOptions('parts')">
+                    <img src="Images/Parts.jpg" alt="Chicken Parts">
+                    <h2>Fried Chicken Parts</h2>
+                </div>
+                <div class="category-card" onclick="showOptions('soup')">
+                    <img src="Images/mami.jpg" alt="Soup Meals">
+                    <h2>Soup Meals</h2>
+                </div>
+                <div class="category-card" onclick="showOptions('rice')">
+                    <img src="Images/pikoysilog.jpg" alt="Soup Meals">
+                    <h2>Rice Meals</h2>
+                </div>
+            </div>
+
+            <!-- Options Menu (Initially Hidden) -->
+            <div class="options-menu" id="wholeOptions" style="display: none;">
+                <h2>Whole Fried Chicken Options</h2>
+                <div class="menu-grid">
+                    <div class="menu-item" onclick="addToOrder('Whole Chicken (1kg)', 250)">
+                        <img src="Images/topepti.jpg" alt="1kg Chicken">
+                        <h3>Large Whole Chicken</h3>
+                        <p class="price">₱250</p>
+                    </div>
+                    <div class="menu-item" onclick="addToOrder('Whole Chicken (1.25kg)', 300)">
+                        <img src="Images/Whole.jpg" alt="1.25kg Chicken">
+                        <h3>Giant Whole Chicken</h3>
+                        <p class="price">₱300</p>
+                    </div>
+                </div>
+                <button class="back-button" onclick="showMainMenu()">Back to Main Menu</button>
+            </div>
+
+            <div class="options-menu" id="partsOptions" style="display: none;">
+                <h2>Fried Chicken Parts</h2>
+                <div class="menu-grid">
+                    <div class="menu-item" onclick="addToOrder('Chicken Leg', 25)">
+                        <img src="Images/Leg.jpg" alt="Chicken Leg">
+                        <h3>Chicken Leg</h3>
+                        <p class="price">₱25</p>
+                    </div>
+                    <div class="menu-item" onclick="addToOrder('Chicken Thigh', 30)">
+                        <img src="Images/Thigh.jpg" alt="Chicken Thigh">
+                        <h3>Chicken Thigh</h3>
+                        <p class="price">₱30</p>
+                    </div>
+                    <div class="menu-item" onclick="addToOrder('Chicken Breast', 30)">
+                        <img src="Images/Breast.jpg" alt="Chicken Breast">
+                        <h3>Chicken Breast</h3>
+                        <p class="price">₱30</p>
+                    </div>
+                    <div class="menu-item" onclick="addToOrder('Chicken Wings', 25)">
+                        <img src="Images/Wings.jpg" alt="Chicken Wings">
+                        <h3>Chicken Wings</h3>
+                        <p class="price">₱25</p>
+                    </div>
+                    <div class="menu-item" onclick="addToOrder('Chicken Liog', 20)">
+                        <img src="Images/Neck.jpg" alt="Chicken Liog">
+                        <h3>Chicken Liog</h3>
+                        <p class="price">₱20</p>
+                    </div>
+                </div>
+                <button class="back-button" onclick="showMainMenu()">Back to Main Menu</button>
+            </div>
+
+            <div class="options-menu" id="soupOptions" style="display: none;">
+                <h2>Soup Meals</h2>
+                <div class="menu-grid">
+                    <div class="menu-item" onclick="addToOrder('Beef Mami', 50)">
+                        <img src="Images/mami.jpg" alt="Beef Mami">
+                        <h3>Beef Mami</h3>
+                        <p class="price">₱50</p>
+                    </div>
+                    <div class="menu-item" onclick="addToOrder('Beef Pares w/ Rice', 60)">
+                        <img src="Images/Whole.jpg" alt="Beef Pares">
+                        <h3>Beef Pares</h3>
+                        <p class="price">₱60</p>
+                    </div>
+                </div>
+                <button class="back-button" onclick="showMainMenu()">Back to Main Menu</button>
+            </div>
+
+            <div class="options-menu" id="riceOptions" style="display: none;">
+                <h2>Silog Meals</h2>
+                <div class="menu-grid">
+                    <div class="menu-item" onclick="addToOrder('Pikoysilog', 65)">
+                        <img src="Images/topepti.jpg" alt="1kg Chicken">
+                        <h3>Pikoysilog</h3>
+                        <p class="price">₱65</p>
+                    </div>
+                    <div class="menu-item" onclick="addToOrder('Tapsilog', 70)">
+                        <img src="Images/Whole.jpg" alt="1.25kg Chicken">
+                        <h3>Tapsilog</h3>
+                        <p class="price">₱70</p>
+                    </div>
+                    <div class="menu-item" onclick="addToOrder('Hotsilog', 65)">
+                        <img src="Images/topepti.jpg" alt="1kg Chicken">
+                        <h3>Hotsilog</h3>
+                        <p class="price">₱65</p>
+                    </div>
+                    <div class="menu-item" onclick="addToOrder('Longsilog', 65)">
+                        <img src="Images/Whole.jpg" alt="1.25kg Chicken">
+                        <h3>Longsilog</h3>
+                        <p class="price">₱65</p>
+                    </div>
+                </div>
+
+                <h2>Pikoy's Exclusive Meals</h2>
+                <div class="menu-grid">
+                    <div class="menu-item" onclick="addToOrder('Whole Chicken (1kg)', 250)">
+                        <img src="Images/topepti.jpg" alt="1kg Chicken">
+                        <h3>Pikoy's Special Chicken</h3>
+                        <p class="price">₱250</p>
+                    </div>
+                    <div class="menu-item" onclick="addToOrder('Whole Chicken (1.25kg)', 300)">
+                        <img src="Images/Whole.jpg" alt="1.25kg Chicken">
+                        <h3>Double Pikoy's Chicken</h3> 
+                        <p class="price">₱300</p>
+                    </div>
+                </div>
+                
+                <button class="back-button" onclick="showMainMenu()">Back to Main Menu</button>
+            </div>
+
+            <!-- Dashboard (Initially Hidden) -->
+            <div class="dashboard" id="dashboard" style="display: none;">
+                <div class="dashboard-header">
+                    <h2>Sales History</h2>
+                    <button class="clear-records-btn" onclick="clearRecentRecords()">
+                        <span class="material-icons">delete</span>
+                        Clear Last 24h Records
+                    </button>
+                </div>
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <h3>Today's Sales</h3>
+                        <p class="amount">₱<span id="todaySales">0</span></p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Orders</h3>
+                        <p class="amount"><span id="totalOrders">0</span></p>
+                    </div>
+                </div>
+                <div class="sales-history">
+                    <h3>Recent Orders</h3>
+                    <table id="salesTable">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Items</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="salesHistory">
+                            <!-- Sales history will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            
+        </main>
+
+        <!-- Order Sidebar -->
+        <aside class="order-sidebar">
+            <div class="order-header">
+                <h2>Current <span>Order</span></h2>
+                <button class="clear-btn" onclick="clearOrder()">
+                    <span class="material-icons">refresh</span>
+                </button>
+            </div>
+            <div class="order-items" id="orderItems">
+                <!-- Order items will be added here by JavaScript -->
+            </div>
+            <div class="order-summary">
+                <div class="subtotal">
+                    <span>Sub Total</span>
+                    <span id="subtotal">₱0.00</span>
+                </div>
+                <button class="order-now" onclick="proceedToPayment()">Proceed to Payment</button>
+            </div>            
+        </aside>
+    </div>
+
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <h2>Payment Details</h2>
+            <div class="payment-details">
+                <div class="payment-row">
+                    <span>Sub Total:</span>
+                    <span id="modalSubtotal">₱0.00</span>
+                </div>
+                <div class="payment-row">
+                    <label for="modalCustomerPayment">Customer Payment:</label>
+                    <input type="number" id="modalCustomerPayment" placeholder="Enter amount">
+                </div>
+                <div class="payment-row">
+                    <span>Change:</span>
+                    <span id="modalChange">₱0.00</span>
+                </div>
+            </div>
+            <button id="completeOrderBtn" class="complete-order-btn">Complete Order</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

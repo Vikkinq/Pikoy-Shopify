@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Pikoy's Fried Chicken</title>
+    <link rel="icon" href="Images/Pikoys-Logo.png" type="image/icon type">
+    <link rel="stylesheet" href="about.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">P</div>
+            <ul>
+                <li><a href="about.html" class="active">Home</a></li>
+                <li><a href="index.html">Shop</a></li>
+                <li><a href="#" onclick="showSalesHistory()">Sales</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Meet, Eat & <br>Enjoy The <span>True Taste.</span></h1>
+                <p>Food tastes better when you eat with your family and friends</p>
+                <a href="index.html" class="cta-button">Get Started</a>
+            </div>
+            <div class="hero-image">
+                <div class="logo-large">
+                    <img src="Images/Pikoys-Logo.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="steps">
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-icon">
+                        <span class="material-icons">shopping_cart</span>
+                    </div>
+                    <h3>Order Your Food</h3>
+                    <p>Lorem ipsum dolor sit consectetur adipiscing elit.</p>
+                    <a href="#" class="read-more">Read more →</a>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">
+                        <span class="material-icons">local_shipping</span>
+                    </div>
+                    <h3>Pickup Your Food</h3>
+                    <p>Lorem ipsum dolor sit consectetur adipiscing elit.</p>
+                    <a href="#" class="read-more">Read more →</a>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">
+                        <span class="material-icons">restaurant</span>
+                    </div>
+                    <h3>Enjoy Your Food</h3>
+                    <p>Lorem ipsum dolor sit consectetur adipiscing elit.</p>
+                    <a href="#" class="read-more">Read more →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add this section right after the special-dish section -->
+        <section class="video-feature">
+            <h2>Experience Our Kitchen</h2>
+            <p>Watch how we prepare our signature dishes with love and care</p>
+    
+            <div class="video-container">
+                <!-- Option 1: YouTube Embed -->
+                <iframe 
+                    src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+                    title="Pikoy's Kitchen"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+
+                <!-- Option 2: Local Video File (uncomment this and comment out the iframe above to use local video) -->
+                <!--
+                <video controls poster="/path-to-your-thumbnail.jpg">
+                    <source src="/videos/pikoys-kitchen.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                -->
+            </div>
+        </section>
+        
+        <section class="special-dish">
+            <h2>Our Special Dish</h2>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="/placeholder.svg?height=200&width=200" alt="Chicken Mix">
+                    <h3>Chicken Mix</h3>
+                    <p>Food tastes better when you eat with your family and friends.</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <div class="price-row">
+                        <span class="price">₱19.95</span>
+                        <button class="order-btn">Order Now</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="/placeholder.svg?height=200&width=200" alt="Chicken Mix">
+                    <h3>Chicken Mix</h3>
+                    <p>Food tastes better when you eat with your family and friends.</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <div class="price-row">
+                        <span class="price">₱19.95</span>
+                        <button class="order-btn">Order Now</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="/placeholder.svg?height=200&width=200" alt="Chicken Mix">
+                    <h3>Chicken Mix</h3>
+                    <p>Food tastes better when you eat with your family and friends.</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <div class="price-row">
+                        <span class="price">₱19.95</span>
+                        <button class="order-btn">Order Now</button>
+                    </div>
+                </div>
+                <!-- Repeat for other menu items -->
+            </div>
+        </section>
+
+        <!--
+        <section class="chef-section">
+            <div class="chef-content">
+                <h2>Cooked by the Best Chefs in the World</h2>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+                <ul class="chef-features">
+                    <li>✓ A gourmet delicious meal</li>
+                    <li>✓ 100% guaranteed hygiene</li>
+                    <li>✓ Crafted spirit</li>
+                </ul>
+            </div>
+            <div class="chef-image">
+                <img src="/placeholder.svg?height=400&width=400" alt="Our Chef">
+            </div>
+        </section> -->
+
+        <section class="testimonials">
+            <h2>What Our Customers Are Saying</h2>
+            <div class="testimonial-card">
+                <p>"The best fried chicken I've ever tasted! Crispy on the outside, juicy on the inside."</p>
+                <div class="testimonial-author">
+                    <img src="Images/customer1.jpg" alt="Customer">
+                    <div>
+                        <h4>Fritz Symon Blancaflor</h4>
+                        <p>Happy Customer</p>
+                    </div>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="location">
+            <h2>Find Us</h2>
+            <div class="location-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d832.7327464340493!2d122.83309566426561!3d11.478337357952523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a5f7ddd070180d%3A0xec3963b79ca6a19b!2sPikoy&#39;s%20Fried%20Chicken!5e1!3m2!1sen!2sph!4v1736496535776!5m2!1sen!2sph" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div class="location-info">
+                    <h3>Pikoy's Fried Chicken</h3>
+                    <p><span class="material-icons">location_on</span> 123 Main Street, Your City</p>
+                    <p><span class="material-icons">phone</span> (123) 456-7890</p>
+                    <p><span class="material-icons">schedule</span> Open Daily: 10AM - 10PM</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">P</div>
+                <p>Lorem ipsum is simply dummy text used in laying out print, graphic or web designs.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Quality</a></li>
+                        <li><a href="#">Story</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Pikoy's Fried Chicken. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="about.js"></script>
+</body>
+</html>
+
